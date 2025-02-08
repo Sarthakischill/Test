@@ -1,0 +1,219 @@
+[
+  {
+    "question": "Which subjects did you score highest in or enjoy most?",
+    "type": "multiple-select",
+    "options": [
+      "Mathematics/Statistics",
+      "Physics/Chemistry",
+      "Biology/Environmental Science",
+      "Computer Science/Programming",
+      "Literature/Languages",
+      "Social Sciences (Psychology, Economics)",
+      "Arts (Music, Design, Theater)",
+      "Commerce/Business Studies"
+    ]
+  },
+  {
+    "question": "Rate your confidence in these tasks (1 = Low, 5 = High):",
+    "type": "rating",
+    "options": [
+      {
+        "text": "Solving math/logic puzzles",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Writing research reports",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Coding a simple app/website",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Designing posters/digital art",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Conducting lab experiments",
+        "min": 1,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "question": "Which activities excite you?",
+    "type": "multiple-select",
+    "options": [
+      "Building robots/automated systems",
+      "Debating social/environmental issues",
+      "Creating digital art or animations",
+      "Managing events/budgets",
+      "Conducting biology experiments",
+      "Writing stories/scripts",
+      "Designing interiors/fashion",
+      "Working in healthcare labs"
+    ]
+  },
+  {
+    "question": "How interested are you in these fields? (1 = Not Interested, 5 = Very Interested)",
+    "type": "rating",
+    "options": [
+      {
+        "text": "Artificial Intelligence & Data Science",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Environmental Sustainability",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Biotechnology/Genetic Engineering",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Film Production/Animation",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Business Analytics/FinTech",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Robotics & Industrial Automation",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Law & Social Justice",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Pharmaceutical Sciences",
+        "min": 1,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "question": "What work environment do you prefer?",
+    "type": "single-select",
+    "options": [
+      "Tech labs/research facilities",
+      "Creative studios (art, design, film)",
+      "Corporate offices/banks",
+      "Outdoor fieldwork (agriculture, environment)",
+      "Courtrooms/NGOs"
+    ]
+  },
+  {
+    "question": "Rank these career factors (1 = Most Important, 5 = Least Important):",
+    "type": "rating",
+    "options": [
+      {
+        "text": "High salary",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Creativity/innovation",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Social impact",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Job stability",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Leadership opportunities",
+        "min": 1,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "question": "You're tasked with improving a city's sustainability. Which project would you lead?",
+    "type": "single-select",
+    "options": [
+      "Designing AI-powered waste management systems",
+      "Creating campaigns to reduce plastic usage",
+      "Developing renewable energy solutions",
+      "Building eco-friendly architectural models"
+    ]
+  },
+  {
+    "question": "A company wants to launch a new product. What role would you choose?",
+    "type": "single-select",
+    "options": [
+      "Market research & data analysis",
+      "Product design & prototyping",
+      "Legal compliance & patent filing",
+      "Digital marketing campaigns"
+    ]
+  },
+  {
+    "question": "How do you approach problems?",
+    "type": "single-select",
+    "options": [
+      "Analyze data and find logical solutions",
+      "Brainstorm creative ideas with a team",
+      "Follow structured plans/guidelines",
+      "Advocate for ethical/social considerations"
+    ]
+  },
+  {
+    "question": "Rate your comfort with these tasks (1 = Uncomfortable, 5 = Comfortable):",
+    "type": "rating",
+    "options": [
+      {
+        "text": "Public speaking/presentations",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Writing code for 6+ hours",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Editing videos/animations",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "text": "Handling financial calculations",
+        "min": 1,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "question": "Which of these appeal to you?",
+    "type": "multiple-select",
+    "options": [
+      "Working with AI/robotics (e.g., building drones)",
+      "Developing mobile apps/software",
+      "Studying human behavior/psychology",
+      "Designing fashion/interiors",
+      "Researching diseases/drugs",
+      "Making short films/animations",
+      "Managing business startups",
+      "Practicing law/rights advocacy"
+    ]
+  }
+]
