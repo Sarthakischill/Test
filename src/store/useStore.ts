@@ -16,11 +16,14 @@ export const useStore = create<Store>((set) => ({
   responses: {},
   setQuestions: (questions) => set({ questions }),
   setCurrentQuestionIndex: (index) => set({ currentQuestionIndex: index }),
-  updateResponse: (section, response) => 
+  updateResponse: (section, response) =>
     set((state) => ({
       responses: {
         ...state.responses,
-        [section]: Array.isArray(response) ? response : [response]
+        [section]: [
+          ...(state.responses[section] || []),
+          ...(Array.isArray(response) ? response : [response])
+        ]
       }
     }))
 }));

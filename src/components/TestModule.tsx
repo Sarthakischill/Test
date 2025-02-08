@@ -14,6 +14,21 @@ export const TestModule = () => {
   const navigate = useNavigate();
   const [selectedOptions, setSelectedOptions] = useState<Record<number, any>>({});
 
+  // Mapping question indices to rule keys
+  const questionCategoryMapping: { [index: number]: string } = {
+    0: "Academic Strengths",
+    1: "Confidence Tasks",
+    2: "Interests & Passions",
+    3: "Interest Ratings",
+    4: "Career Goals",
+    5: "Career Factor Rankings",
+    6: "Scenario-Based Q7",
+    7: "Scenario-Based Q8",
+    8: "Skills & Personality",
+    9: "Skills & Personality", // For Q10
+    10: "Program-Specific Preferences"
+  };
+
   // Early return for loading state
   if (!questions || questions.length === 0) {
     return (
@@ -41,7 +56,9 @@ export const TestModule = () => {
 
   const handleNext = () => {
     if (selectedOptions[currentQuestionIndex]) {
-      updateResponse(currentQuestion.question, selectedOptions[currentQuestionIndex]);
+      // Map the question index to the correct section key
+      const category = questionCategoryMapping[currentQuestionIndex] || currentQuestion.question;
+      updateResponse(category, selectedOptions[currentQuestionIndex]);
       if (currentQuestionIndex === questions.length - 1) {
         navigate('/results');
       } else {
