@@ -14,7 +14,6 @@ export const TestModule = () => {
   const navigate = useNavigate();
   const [selectedOptions, setSelectedOptions] = useState<Record<number, any>>({});
 
-  // Mapping question indices to rule keys
   const questionCategoryMapping: { [index: number]: string } = {
     0: "Academic Strengths",
     1: "Confidence Tasks",
@@ -25,17 +24,16 @@ export const TestModule = () => {
     6: "Scenario-Based Q7",
     7: "Scenario-Based Q8",
     8: "Skills & Personality",
-    9: "Skills & Personality", // For Q10
+    9: "Skills & Personality",
     10: "Program-Specific Preferences"
   };
 
-  // Early return for loading state
   if (!questions || questions.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-[#F8F2ED] to-[#EED4C3] flex items-center justify-center">
         <div className="flex items-center gap-2">
-          <Loader2 className="w-6 h-6 animate-spin text-indigo-600" />
-          <span className="text-lg text-gray-700">Loading questions...</span>
+          <Loader2 className="w-6 h-6 animate-spin text-[#DDA683]" />
+          <span className="text-lg text-[#2E3653]">Loading questions...</span>
         </div>
       </div>
     );
@@ -43,12 +41,11 @@ export const TestModule = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
-  // Early return if no current question
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-[#F8F2ED] to-[#EED4C3] flex items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <p className="text-lg text-gray-700">No questions available.</p>
+          <p className="text-lg text-[#2E3653]">No questions available.</p>
         </div>
       </div>
     );
@@ -56,7 +53,6 @@ export const TestModule = () => {
 
   const handleNext = () => {
     if (selectedOptions[currentQuestionIndex]) {
-      // Map the question index to the correct section key
       const category = questionCategoryMapping[currentQuestionIndex] || currentQuestion.question;
       updateResponse(category, selectedOptions[currentQuestionIndex]);
       if (currentQuestionIndex === questions.length - 1) {
@@ -95,20 +91,20 @@ export const TestModule = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#F8F2ED] to-[#EED4C3] py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="mb-8">
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-[#EED4C3] rounded-full h-2">
                 <div
-                  className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                  className="bg-[#FC8939] h-2 rounded-full transition-all duration-300"
                   style={{
                     width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`
                   }}
                 />
               </div>
-              <p className="text-right text-sm text-gray-600 mt-2">
+              <p className="text-right text-sm text-[#2E3653] mt-2">
                 Question {currentQuestionIndex + 1} of {questions.length}
               </p>
             </div>
@@ -121,7 +117,7 @@ export const TestModule = () => {
                 exit={{ x: -50, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-[#2E3653] mb-6">
                   {currentQuestion.question}
                 </h2>
 
@@ -135,8 +131,8 @@ export const TestModule = () => {
                           onClick={() => handleSelect(option)}
                           className={`w-full p-4 rounded-lg border-2 transition-all ${
                             isSelected
-                              ? 'border-indigo-600 bg-indigo-50'
-                              : 'border-gray-200 hover:border-indigo-300'
+                              ? 'border-[#FC8939] bg-[#F8F2ED]'
+                              : 'border-[#EED4C3] hover:border-[#DDA683]'
                           }`}
                         >
                           {option}
@@ -147,7 +143,7 @@ export const TestModule = () => {
                         (o: any) => o[option.text]
                       )?.[option.text];
                       return (
-                        <div key={index} className="p-4 rounded-lg border-2 border-gray-200">
+                        <div key={index} className="p-4 rounded-lg border-2 border-[#EED4C3]">
                           <p className="mb-2">{option.text}</p>
                           <div className="flex gap-2">
                             {Array.from({ length: option.max }, (_, i) => i + 1).map((value) => (
@@ -156,8 +152,8 @@ export const TestModule = () => {
                                 onClick={() => handleRating(option.text, value)}
                                 className={`w-10 h-10 rounded-full ${
                                   rating === value
-                                    ? 'bg-indigo-600 text-white'
-                                    : 'bg-gray-100 hover:bg-gray-200'
+                                    ? 'bg-[#FC8939] text-white'
+                                    : 'bg-[#F8F2ED] hover:bg-[#EED4C3]'
                                 }`}
                               >
                                 {value}
@@ -176,7 +172,7 @@ export const TestModule = () => {
               <button
                 onClick={handlePrevious}
                 disabled={currentQuestionIndex === 0}
-                className="flex items-center px-6 py-3 rounded-lg bg-gray-100 text-gray-700 disabled:opacity-50"
+                className="flex items-center px-6 py-3 rounded-lg bg-[#F8F2ED] text-[#2E3653] disabled:opacity-50"
               >
                 <ChevronLeft className="w-5 h-5 mr-2" />
                 Previous
@@ -184,7 +180,7 @@ export const TestModule = () => {
               <button
                 onClick={handleNext}
                 disabled={!selectedOptions[currentQuestionIndex]}
-                className="flex items-center px-6 py-3 rounded-lg bg-indigo-600 text-white disabled:opacity-50"
+                className="flex items-center px-6 py-3 rounded-lg bg-[#FC8939] text-white disabled:opacity-50"
               >
                 {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next'}
                 <ChevronRight className="w-5 h-5 ml-2" />
