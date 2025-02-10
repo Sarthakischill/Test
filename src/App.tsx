@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { LandingPage } from './components/LandingPage';
 import { TestModule } from './components/TestModule';
 import { ResultsPage } from './components/ResultsPage';
+import UserForm from './components/UserForm';
 import { useStore } from './store/useStore';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/userform" element={<UserForm />} />
         <Route path="/test" element={<TestModule />} />
         <Route path="/results" element={<ResultsPage />} />
       </Routes>

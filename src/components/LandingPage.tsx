@@ -23,7 +23,7 @@ export const LandingPage = () => {
             Answer a few questions about your interests, skills, and aspirations to get personalized course recommendations that match your profile.
           </p>
           <Link
-            to="/test" 
+            to="/userform"  
             className="inline-flex items-center px-8 py-4 bg-[#FC8939] text-white rounded-lg text-lg font-medium hover:bg-[#DDA683] transition-colors"
           >
             Start Assessment 
