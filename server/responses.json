@@ -1,0 +1,103 @@
+[
+  {
+    "userInfo": {
+      "name": "DITRO",
+      "designation": "Student"
+    },
+    "responses": {
+      "Academic Strengths": [
+        "Mathematics/Statistics",
+        "Physics/Chemistry",
+        "Computer Science/Programming"
+      ],
+      "Confidence Tasks": [
+        {
+          "Solving math/logic puzzles": 4
+        },
+        {
+          "Writing research reports": 3
+        },
+        {
+          "Coding a simple app/website": 4
+        },
+        {
+          "Designing posters/digital art": 3
+        },
+        {
+          "Conducting lab experiments": 3
+        }
+      ],
+      "Interests & Passions": [
+        "Building robots/automated systems",
+        "Creating digital art or animations"
+      ],
+      "Interest Ratings": [
+        {
+          "Artificial Intelligence & Data Science": 5
+        },
+        {
+          "Environmental Sustainability": 3
+        },
+        {
+          "Biotechnology/Genetic Engineering": 3
+        },
+        {
+          "Film Production/Animation": 4
+        },
+        {
+          "Business Analytics/FinTech": 3
+        },
+        {
+          "Law & Social Justice": 3
+        },
+        {
+          "Robotics & Industrial Automation": 3
+        },
+        {
+          "Pharmaceutical Sciences": 4
+        }
+      ],
+      "Career Goals": [
+        "Tech labs/research facilities"
+      ],
+      "Career Factor Rankings": [
+        {
+          "High salary": 5
+        },
+        {
+          "Creativity/innovation": 3
+        },
+        {
+          "Social impact": 3
+        },
+        {
+          "Job stability": 4
+        },
+        {
+          "Leadership opportunities": 4
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Designing AI-powered waste management systems"
+      ],
+      "Scenario-Based Q8": [
+        "Product design & prototyping"
+      ],
+      "Skills & Personality": [
+        "Analyze data and find logical solutions",
+        {
+          "Public speaking/presentations": 4
+        },
+        {
+          "Writing code for 6+ hours": 5
+        },
+        {
+          "Editing videos/animations": 3
+        },
+        {
+          "Handling financial calculations": 2
+        }
+      ]
+    }
+  }
+]
