@@ -1,6 +1,6 @@
 [
   {
-    "question": "Which subjects did you score highest in or enjoy most?",
+    "question": "Which subjects did you score highest in or enjoy most? (multiple-select)",
     "type": "multiple-select",
     "options": [
       "Mathematics/Statistics",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "question": "Which activities excite you?",
+    "question": "Which activities excite you? (multiple-select)",
     "type": "multiple-select",
     "options": [
       "Building robots/automated systems",
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "question": "What work environment do you prefer?",
+    "question": "What work environment do you prefer? (single-select)",
     "type": "single-select",
     "options": [
       "Tech labs/research facilities",
@@ -147,7 +147,7 @@
     ]
   },
   {
-    "question": "You're tasked with improving a city's sustainability. Which project would you lead?",
+    "question": "You're tasked with improving a city's sustainability. Which project would you lead? (single-select)",
     "type": "single-select",
     "options": [
       "Designing AI-powered waste management systems",
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "question": "A company wants to launch a new product. What role would you choose?",
+    "question": "A company wants to launch a new product. What role would you choose? (single-select)",
     "type": "single-select",
     "options": [
       "Market research & data analysis",
@@ -167,7 +167,7 @@
     ]
   },
   {
-    "question": "How do you approach problems?",
+    "question": "How do you approach problems? (single-select)",
     "type": "single-select",
     "options": [
       "Analyze data and find logical solutions",
@@ -203,7 +203,7 @@
     ]
   },
   {
-    "question": "Which of these appeal to you?",
+    "question": "Which of these appeal to you? (multiple-select)",
     "type": "multiple-select",
     "options": [
       "Working with AI/robotics (e.g., building drones)",
