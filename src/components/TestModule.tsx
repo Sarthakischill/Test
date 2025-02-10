@@ -3,12 +3,15 @@ import { useStore } from '../store/useStore';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { saveToGoogleSheets } from '../lib/googleSheets';
 
 export const TestModule = () => {
   const { 
     questions,
     currentQuestionIndex,
     setCurrentQuestionIndex,
+    responses,
+    userInfo,
     updateResponse
   } = useStore();
   const navigate = useNavigate();
@@ -51,12 +54,21 @@ export const TestModule = () => {
     );
   }
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (selectedOptions[currentQuestionIndex]) {
       const category = questionCategoryMapping[currentQuestionIndex] || currentQuestion.question;
       updateResponse(category, selectedOptions[currentQuestionIndex]);
+      
       if (currentQuestionIndex === questions.length - 1) {
-        navigate('/results');
+        try {
+          await saveToGoogleSheets({
+            ...userInfo, 
+            responses
+          });
+          navigate('/results');
+        } catch (error) {
+          console.error('Failed to save responses:', error);
+        }
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }

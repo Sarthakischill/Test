@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, User, Briefcase, CheckCircle } from 'lucide-react';
+import { useStore } from '../store/useStore';
 
 const UserForm = () => {
   const [formData, setFormData] = useState({
@@ -11,17 +12,19 @@ const UserForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const setUserInfo = useStore((state) => state.setUserInfo);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    setUserInfo({
+      name: formData.name,
+      designation: formData.designation
+    });
     
     setShowModal(true);
     
-    // Redirect after showing modal
     setTimeout(() => {
       navigate('/test');
     }, 2000);
