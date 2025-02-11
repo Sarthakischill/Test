@@ -1,0 +1,101 @@
+{
+  "bhargavi Shah": {
+    "id": "bhargavi Shah",
+    "designation": "Velli",
+    "responses": {
+      "Academic Strengths": [
+        "Mathematics/Statistics",
+        "Physics/Chemistry"
+      ],
+      "Confidence Tasks": [
+        {
+          "Writing research reports": 4
+        },
+        {
+          "Solving math/logic puzzles": 3
+        },
+        {
+          "Coding a simple app/website": 3
+        },
+        {
+          "Designing posters/digital art": 3
+        },
+        {
+          "Conducting lab experiments": 3
+        }
+      ],
+      "Interests & Passions": [
+        "Building robots/automated systems",
+        "Debating social/environmental issues"
+      ],
+      "Interest Ratings": [
+        {
+          "Artificial Intelligence & Data Science": 4
+        },
+        {
+          "Environmental Sustainability": 4
+        },
+        {
+          "Biotechnology/Genetic Engineering": 3
+        },
+        {
+          "Film Production/Animation": 3
+        },
+        {
+          "Business Analytics/FinTech": 2
+        },
+        {
+          "Law & Social Justice": 3
+        },
+        {
+          "Robotics & Industrial Automation": 2
+        },
+        {
+          "Pharmaceutical Sciences": 2
+        }
+      ],
+      "Career Goals": [
+        "Tech labs/research facilities"
+      ],
+      "Career Factor Rankings": [
+        {
+          "High salary": 4
+        },
+        {
+          "Creativity/innovation": 5
+        },
+        {
+          "Social impact": 3
+        },
+        {
+          "Job stability": 3
+        },
+        {
+          "Leadership opportunities": 2
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Designing AI-powered waste management systems"
+      ],
+      "Scenario-Based Q8": [
+        "Product design & prototyping"
+      ],
+      "Skills & Personality": [
+        "Analyze data and find logical solutions",
+        {
+          "Public speaking/presentations": 4
+        },
+        {
+          "Writing code for 6+ hours": 5
+        },
+        {
+          "Handling financial calculations": 2
+        },
+        {
+          "Editing videos/animations": 3
+        }
+      ]
+    },
+    "timestamp": "2025-02-11T09:37:54.491Z"
+  }
+}

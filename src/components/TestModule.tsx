@@ -3,7 +3,7 @@ import { useStore } from '../store/useStore';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { saveToGoogleSheets } from '../lib/googleSheets';
+import { saveResponse } from '../services/storageService';
 
 export const TestModule = () => {
   const { 
@@ -54,26 +54,36 @@ export const TestModule = () => {
     );
   }
 
-  const handleNext = async () => {
-    if (selectedOptions[currentQuestionIndex]) {
-      const category = questionCategoryMapping[currentQuestionIndex] || currentQuestion.question;
-      updateResponse(category, selectedOptions[currentQuestionIndex]);
-      
-      if (currentQuestionIndex === questions.length - 1) {
-        try {
-          await saveToGoogleSheets({
-            ...userInfo, 
-            responses
-          });
-          navigate('/results');
-        } catch (error) {
-          console.error('Failed to save responses:', error);
-        }
-      } else {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
+  // Modified section of TestModule.tsx - replace the handleNext function
+const handleNext = async () => {
+  if (selectedOptions[currentQuestionIndex]) {
+    const category = questionCategoryMapping[currentQuestionIndex] || currentQuestion.question;
+    updateResponse(category, selectedOptions[currentQuestionIndex]);
+    
+    if (currentQuestionIndex === questions.length - 1) {
+      try {
+        console.log('Saving final responses:', {
+          ...userInfo,
+          responses
+        });
+        
+        await saveResponse({
+          ...userInfo,
+          responses
+        });
+        
+        console.log('Responses saved successfully');
+        navigate('/results');
+      } catch (error) {
+        console.error('Failed to save responses:', error);
+        // You might want to show an error message to the user here
+        alert('Failed to save your responses. Please try again.');
       }
+    } else {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
-  };
+  }
+};
 
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
