@@ -61,11 +61,8 @@ export const TestModule = () => {
       
       if (currentQuestionIndex === questions.length - 1) {
         try {
-          console.log('User Info:', userInfo);
-          console.log('Responses:', responses);
           await saveToGoogleSheets({
-            name: userInfo?.name || 'Unknown',
-            designation: userInfo?.designation || 'Unknown',
+            ...userInfo, 
             responses
           });
           navigate('/results');

@@ -1,16 +1,7 @@
-// server/index.js
-const express = require('express');
-const cors = require('cors');
+// backend/sheets.js
 const { google } = require('googleapis');
-require('dotenv').config();
 
-const app = express();
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Google Sheets Auth
+// Create auth client
 const auth = new google.auth.GoogleAuth({
   credentials: {
     type: "service_account",
@@ -23,52 +14,55 @@ const auth = new google.auth.GoogleAuth({
     token_uri: "https://oauth2.googleapis.com/token",
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
     client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/career-recommendation%40parabolic-clock-450508-r0.iam.gserviceaccount.com",
+    universe_domain: "googleapis.com"
   },
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
-// Get your spreadsheet ID from the URL of your Google Sheet
+const sheets = google.sheets({ version: 'v4', auth });
+
+// Replace with your Google Sheet ID
 const SPREADSHEET_ID = '1EkZJaJquIftaa3DcZSbEYK1Zgr9uIfbe3oquTX3haUQ';
 
-app.post('/api/save-responses', async (req, res) => {
+async function appendToSheet(data) {
   try {
-    const { userInfo, responses } = req.body;
+    const formattedData = formatDataForSheet(data);
     
-    const sheets = google.sheets({ version: 'v4', auth });
-    
-    // Format data for sheets
-    const rowData = [
-      userInfo.name,
-      userInfo.designation,
-      JSON.stringify(responses["Academic Strengths"] || []),
-      JSON.stringify(responses["Confidence Tasks"] || []),
-      JSON.stringify(responses["Interests & Passions"] || []),
-      JSON.stringify(responses["Interest Ratings"] || []),
-      JSON.stringify(responses["Career Goals"] || []),
-      JSON.stringify(responses["Career Factor Rankings"] || []),
-      JSON.stringify(responses["Scenario-Based Q7"] || []),
-      JSON.stringify(responses["Scenario-Based Q8"] || []),
-      JSON.stringify(responses["Skills & Personality"] || []),
-      JSON.stringify(responses["Program-Specific Preferences"] || [])
-    ];
-
-    await sheets.spreadsheets.values.append({
+    const response = await sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'Sheet1!A:M',
+      range: 'Sheet1!A:M', // Adjust based on your sheet's structure
       valueInputOption: 'RAW',
       resource: {
-        values: [rowData]
+        values: [formattedData]
       }
     });
 
-    res.json({ success: true });
+    return response.data;
   } catch (error) {
-    console.error('Error saving to sheet:', error);
-    res.status(500).json({ success: false, error: error.message });
+    console.error('Error appending to sheet:', error);
+    throw error;
   }
-});
+}
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+function formatDataForSheet(data) {
+  const { userInfo, responses } = data;
+  
+  return [
+    userInfo.name,
+    userInfo.designation,
+    JSON.stringify(responses["Academic Strengths"] || []),
+    JSON.stringify(responses["Confidence Tasks"] || []),
+    JSON.stringify(responses["Interests & Passions"] || []),
+    JSON.stringify(responses["Interest Ratings"] || []),
+    JSON.stringify(responses["Career Goals"] || []),
+    JSON.stringify(responses["Career Factor Rankings"] || []),
+    JSON.stringify(responses["Scenario-Based Q7"] || []),
+    JSON.stringify(responses["Scenario-Based Q8"] || []),
+    JSON.stringify(responses["Skills & Personality"] || []),
+    JSON.stringify(responses["Program-Specific Preferences"] || [])
+  ];
+}
+
+module.exports = {
+  appendToSheet
+};
