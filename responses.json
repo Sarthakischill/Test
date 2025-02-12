@@ -97,5 +97,368 @@
       ]
     },
     "timestamp": "2025-02-11T09:37:54.491Z"
+  },
+  "Pranav Kakade": {
+    "id": "Pranav Kakade",
+    "designation": "Engineer",
+    "responses": {
+      "Academic Strengths": [
+        "Literature/Languages"
+      ],
+      "Confidence Tasks": [
+        {
+          "Coding a simple app/website": 5
+        }
+      ],
+      "Interests & Passions": [
+        "Writing stories/scripts"
+      ],
+      "Interest Ratings": [
+        {
+          "Biotechnology/Genetic Engineering": 4
+        },
+        {
+          "Environmental Sustainability": 4
+        }
+      ],
+      "Career Goals": [
+        "Outdoor fieldwork (agriculture, environment)"
+      ],
+      "Career Factor Rankings": [
+        {
+          "Creativity/innovation": 5
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Designing AI-powered waste management systems"
+      ],
+      "Scenario-Based Q8": [
+        "Legal compliance & patent filing"
+      ],
+      "Skills & Personality": [
+        "Advocate for ethical/social considerations",
+        {
+          "Public speaking/presentations": 5
+        }
+      ]
+    },
+    "timestamp": "2025-02-11T10:41:32.668Z"
+  },
+  "vidhi joshi": {
+    "id": "vidhi joshi",
+    "designation": "bachelor's degree",
+    "responses": {
+      "Academic Strengths": [
+        "Arts (Music, Design, Theater)",
+        "Mathematics/Statistics"
+      ],
+      "Confidence Tasks": [
+        {
+          "Solving math/logic puzzles": 4
+        },
+        {
+          "Writing research reports": 3
+        },
+        {
+          "Coding a simple app/website": 2
+        },
+        {
+          "Designing posters/digital art": 5
+        },
+        {
+          "Conducting lab experiments": 2
+        }
+      ],
+      "Interests & Passions": [
+        "Creating digital art or animations",
+        "Designing interiors/fashion",
+        "Debating social/environmental issues"
+      ],
+      "Interest Ratings": [
+        {
+          "Artificial Intelligence & Data Science": 2
+        },
+        {
+          "Environmental Sustainability": 3
+        },
+        {
+          "Biotechnology/Genetic Engineering": 4
+        },
+        {
+          "Film Production/Animation": 5
+        },
+        {
+          "Business Analytics/FinTech": 3
+        },
+        {
+          "Robotics & Industrial Automation": 2
+        },
+        {
+          "Law & Social Justice": 5
+        },
+        {
+          "Pharmaceutical Sciences": 1
+        }
+      ],
+      "Career Goals": [
+        "Creative studios (art, design, film)"
+      ],
+      "Career Factor Rankings": [
+        {
+          "High salary": 4
+        },
+        {
+          "Creativity/innovation": 5
+        },
+        {
+          "Social impact": 4
+        },
+        {
+          "Job stability": 2
+        },
+        {
+          "Leadership opportunities": 5
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Creating campaigns to reduce plastic usage"
+      ],
+      "Scenario-Based Q8": [
+        "Digital marketing campaigns"
+      ],
+      "Skills & Personality": [
+        "Brainstorm creative ideas with a team",
+        {
+          "Public speaking/presentations": 5
+        },
+        {
+          "Writing code for 6+ hours": 2
+        },
+        {
+          "Editing videos/animations": 5
+        },
+        {
+          "Handling financial calculations": 2
+        }
+      ]
+    },
+    "timestamp": "2025-02-12T09:08:10.039Z"
+  },
+  "Pranav": {
+    "id": "Pranav",
+    "designation": "Studnet",
+    "responses": {
+      "Academic Strengths": [
+        "Physics/Chemistry",
+        "Biology/Environmental Science"
+      ],
+      "Confidence Tasks": [
+        {
+          "Coding a simple app/website": 5
+        },
+        {
+          "Writing research reports": 5
+        }
+      ],
+      "Interests & Passions": [
+        "Writing stories/scripts",
+        "Conducting biology experiments"
+      ],
+      "Interest Ratings": [
+        {
+          "Pharmaceutical Sciences": 4
+        },
+        {
+          "Law & Social Justice": 4
+        },
+        {
+          "Robotics & Industrial Automation": 4
+        }
+      ],
+      "Career Goals": [
+        "Outdoor fieldwork (agriculture, environment)"
+      ],
+      "Career Factor Rankings": [
+        {
+          "Creativity/innovation": 5
+        },
+        {
+          "High salary": 5
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Developing renewable energy solutions"
+      ],
+      "Scenario-Based Q8": [
+        "Digital marketing campaigns"
+      ],
+      "Skills & Personality": [
+        "Analyze data and find logical solutions",
+        {
+          "Writing code for 6+ hours": 5
+        }
+      ]
+    },
+    "timestamp": "2025-02-12T09:09:32.776Z"
+  },
+  "Sarthak Shitole": {
+    "id": "Sarthak Shitole",
+    "designation": "Intern",
+    "responses": {
+      "Academic Strengths": [
+        "Mathematics/Statistics",
+        "Physics/Chemistry"
+      ],
+      "Confidence Tasks": [
+        {
+          "Conducting lab experiments": 4
+        },
+        {
+          "Designing posters/digital art": 3
+        },
+        {
+          "Coding a simple app/website": 4
+        }
+      ],
+      "Interests & Passions": [
+        "Working in healthcare labs",
+        "Designing interiors/fashion"
+      ],
+      "Interest Ratings": [
+        {
+          "Pharmaceutical Sciences": 4
+        },
+        {
+          "Law & Social Justice": 4
+        }
+      ],
+      "Career Goals": [
+        "Outdoor fieldwork (agriculture, environment)"
+      ],
+      "Career Factor Rankings": [
+        {
+          "Leadership opportunities": 5
+        },
+        {
+          "Job stability": 3
+        },
+        {
+          "Social impact": 3
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Developing renewable energy solutions"
+      ],
+      "Scenario-Based Q8": [
+        "Digital marketing campaigns"
+      ],
+      "Skills & Personality": [
+        "Advocate for ethical/social considerations",
+        {
+          "Handling financial calculations": 5
+        }
+      ]
+    },
+    "timestamp": "2025-02-12T09:15:23.852Z"
+  },
+  "Sandesh Soni": {
+    "id": "Sandesh Soni",
+    "designation": "Student ",
+    "responses": {
+      "Academic Strengths": [
+        "Mathematics/Statistics",
+        "Physics/Chemistry",
+        "Computer Science/Programming",
+        "Arts (Music, Design, Theater)"
+      ],
+      "Confidence Tasks": [
+        {
+          "Solving math/logic puzzles": 4
+        },
+        {
+          "Writing research reports": 4
+        },
+        {
+          "Coding a simple app/website": 4
+        },
+        {
+          "Designing posters/digital art": 4
+        },
+        {
+          "Conducting lab experiments": 4
+        }
+      ],
+      "Interests & Passions": [
+        "Building robots/automated systems"
+      ],
+      "Interest Ratings": [
+        {
+          "Artificial Intelligence & Data Science": 4
+        },
+        {
+          "Environmental Sustainability": 4
+        },
+        {
+          "Biotechnology/Genetic Engineering": 2
+        },
+        {
+          "Film Production/Animation": 2
+        },
+        {
+          "Business Analytics/FinTech": 2
+        },
+        {
+          "Robotics & Industrial Automation": 3
+        },
+        {
+          "Law & Social Justice": 1
+        },
+        {
+          "Pharmaceutical Sciences": 1
+        }
+      ],
+      "Career Goals": [
+        "Tech labs/research facilities"
+      ],
+      "Career Factor Rankings": [
+        {
+          "High salary": 4
+        },
+        {
+          "Creativity/innovation": 4
+        },
+        {
+          "Social impact": 4
+        },
+        {
+          "Job stability": 4
+        },
+        {
+          "Leadership opportunities": 4
+        }
+      ],
+      "Scenario-Based Q7": [
+        "Creating campaigns to reduce plastic usage"
+      ],
+      "Scenario-Based Q8": [
+        "Product design & prototyping"
+      ],
+      "Skills & Personality": [
+        "Analyze data and find logical solutions",
+        {
+          "Public speaking/presentations": 4
+        },
+        {
+          "Writing code for 6+ hours": 4
+        },
+        {
+          "Editing videos/animations": 4
+        },
+        {
+          "Handling financial calculations": 4
+        }
+      ]
+    },
+    "timestamp": "2025-02-12T09:18:47.844Z"
   }
 }

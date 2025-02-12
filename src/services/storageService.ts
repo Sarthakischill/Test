@@ -7,7 +7,8 @@ interface UserData {
   responses: UserResponse;
 }
 
-const API_URL = 'http://localhost:3001/api/save-response';
+// src/services/storageService.ts
+const API_URL = 'http://172.16.33.57:3001/api/save-response'; // Replace with your IP address;
 
 export const saveResponse = async (data: UserData): Promise<void> => {
   try {
